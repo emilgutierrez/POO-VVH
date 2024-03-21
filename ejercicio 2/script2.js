@@ -37,3 +37,13 @@ function declararVariables() {
     alert("El valor de Suma es " + suma + "\n El valor de la Resta es " + resta + "\n El valor de la Multi es " + multi + "\nEl valor de la Division es " + divi );
      }
     
+function Midirecion(){
+let direccion = "villa con silio baticano";
+let numerocasa =  "9080";
+let  mensaje "yo vivo aqui"
+let
+
+
+
+
+
