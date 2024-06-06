@@ -5,7 +5,7 @@ function cambiarImagen() {
         imagen.src = "Cheems el perrito meme, murió.jpg";
         imagen.alt = "Cheems el perrito meme, murió.jpg";
     } else {
-        imagen.src = "imagen1.jpg";
-        imagen.alt = "Imagen 1";
+        imagen.src = "Cheems el perrito meme, murió.jpg";
+        imagen.alt = "Cheems el perrito meme, murió.jpg";
     }
 }
