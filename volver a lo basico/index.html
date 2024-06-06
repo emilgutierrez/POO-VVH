@@ -1,24 +1,17 @@
-<button onclick="ejemplo(this)">
-    Hazme clic
-    </button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cambiar Imagen</h1>
+    <img id="imagen" src="imagen1.jpg" alt="Imagen 1">
+    <br>
+    <button onclick="cambiarImagen()">Cambiar Imagen</button>
 
-    <button onclick="turnOff(this)">On</button>
-    <button onclick="turnOff(this)">On</button>
-    <button onclick="turnOff(this)">On</button>copy
-    function turnOff(element) {
-     element.innerText = "Off";
-    }
-
-    <h1>Mi Página Web</h1>
-    
-    <!-- Vinculando el archivo JavaScript -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-<img src="descarga.jfif" alt="descarga" onclick="hide(this)">
-<img src="ninja.png" alt="ninja" onclick="hide(this)">
-<img src="ninja.png" alt="ninja" onclick="hide(this)">copy
-function hide(element) {
- element.remove();
-}

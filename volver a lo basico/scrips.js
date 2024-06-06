@@ -1,6 +1,11 @@
-Codigo en script.js
-function ejemplo(elemento) {
-    console.log("elemento clickeado", elemento);
-    elemento.style.backgroundColor = 'yellow'; // Cambia el color de fondo del botón
-    elemento.textContent = 'Clickeado!'; // Cambia el texto del botón
+// JavaScript code
+function cambiarImagen() {
+    var imagen = document.getElementById("imagen");
+    if (imagen.src.match("imagen1.jpg")) {
+        imagen.src = "imagen2.jpg";
+        imagen.alt = "Imagen 2";
+    } else {
+        imagen.src = "imagen1.jpg";
+        imagen.alt = "Imagen 1";
+    }
 }
