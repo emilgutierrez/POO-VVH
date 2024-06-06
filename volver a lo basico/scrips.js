@@ -1,3 +1,4 @@
+Codigo en script.js
 function ejemplo(elemento) {
     console.log("elemento clickeado", elemento);
     elemento.style.backgroundColor = 'yellow'; // Cambia el color de fondo del botón
