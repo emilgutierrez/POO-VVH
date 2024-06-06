@@ -1,11 +1,7 @@
-// JavaScript code
+var imagenes = ["descarga (3).jfif", "descarga (2).jfif", "descarga (1).jfif", "descarga.jfif"];
+var indice = 0;
+
 function cambiarImagen() {
-    var imagen = document.getElementById("imagen");
-    if (imagen.src.match("imagen1.jpg")) {
-        imagen.src = "imagen2.jpg";
-        imagen.alt = "Imagen 2";
-    } else {
-        imagen.src = "imagen1.jpg";
-        imagen.alt = "Imagen 1";
-    }
+  indice = (indice + 1) % imagenes.length;
+  document.getElementById("imagen").src = imagenes[indice];
 }
