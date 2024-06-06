@@ -1,14 +1,28 @@
-// Obtener todas las imágenes en la lista
-const imagenes = document.querySelectorAll('ul li img');
+// Definir un array con las rutas de las imágenes
+const imagenes = [
+    "Cheems_el_perrito_meme_murió.jpg",
+    "perro.jpg",
+    "bdcb3f389881a33dcfd785716cc61c67.jpg",
+    "descarga (1).jfif"
+];
 
-// Iterar sobre cada imagen y agregar un evento de clic
-imagenes.forEach(imagen => {
-    imagen.addEventListener('click', () => {
-        // Obtener la ruta de la imagen clicada
-        const nuevaImagenSrc = imagen.getAttribute('src');
+// Obtener el botón y la imagen principal
+const botonCambiar = document.getElementById('cambiarImagenBtn');
+const imagenPrincipal = document.getElementById('imagenPrincipal');
 
-        // Obtener la imagen principal y cambiar su src
-        const imagenPrincipal = document.getElementById('imagenPrincipal');
-        imagenPrincipal.setAttribute('src', nuevaImagenSrc);
-    });
+// Definir un contador para realizar un seguimiento de la imagen actual
+let contadorImagen = 0;
+
+// Agregar un evento de clic al botón
+botonCambiar.addEventListener('click', () => {
+    // Cambiar la imagen principal a la siguiente en el array
+    imagenPrincipal.src = imagenes[contadorImagen];
+    
+    // Incrementar el contador de imagen
+    contadorImagen++;
+
+    // Si el contador excede el número de imágenes, volver al principio del array
+    if (contadorImagen >= imagenes.length) {
+        contadorImagen = 0;
+    }
 });
