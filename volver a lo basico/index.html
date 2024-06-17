@@ -1,20 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cambiar Imágenes</title>
-<link rel="stylesheet" href="styles.css">
+  <title>Ejemplo de Botones</title>
+  <style>
+    .text-button {
+      background-color: blue;
+      color: white;
+    }
+
+    .icon-button {
+      background-color: green;
+      color: white;
+    }
+  </style>
 </head>
 <body>
+  <button class="text-button" onclick="toggleButton(this)">Botón 1</button>
+  <button class="text-button" onclick="toggleButton(this)">Botón 2</button>
+  <button class="text-button" onclick="toggleButton(this)">Botón 3</button>
 
-<div id="imagenContenedor">
-  <img id="imagen" src="descarga.jfif" alt="Imagen">
-</div>
+  <button class="icon-button" onclick="removeButton(this)">
+    <img src="icon1.png" alt="Icono 1" width="20" height="20">
+  </button>
+  <button class="icon-button" onclick="removeButton(this)">
+    <img src="icon2.png" alt="Icono 2" width="20" height="20">
+  </button>
+  <button class="icon-button" onclick="removeButton(this)">
+    <img src="icon3.png" alt="Icono 3" width="20" height="20">
+  </button>
+  <button class="icon-button" onclick="removeButton(this)">
+    <img src="icon4.png" alt="Icono 4" width="20" height="20">
+  </button>
+  <button class="icon-button" onclick="removeButton(this)">
+    <img src="icon5.png" alt="Icono 5" width="20" height="20">
+  </button>
+  <button class="icon-button" onclick="removeButton(this)">
+    <img src="icon6.png" alt="Icono 6" width="20" height="20">
+  </button>
 
-<button onclick="cambiarImagen()">Cambiar Imagen</button>
+  <script>
+    function toggleButton(button) {
+      if (button.classList.contains("activated")) {
+        button.classList.remove("activated");
+        button.innerHTML = "Desactivado";
+        button.style.backgroundColor = "red";
+      } else {
+        button.classList.add("activated");
+        button.innerHTML = "Activado";
+        button.style.backgroundColor = "green";
+      }
+    }
 
-<script src="script.js"></script>
-
+    function removeButton(button) {
+      button.remove();
+    }
+  </script>
 </body>
 </html>
