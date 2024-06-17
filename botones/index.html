@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Botones con Iconos</title>
+  <style>
+    .icon-button {
+      margin: 5px;
+      padding: 10px;
+      border: none;
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="button1" class="icon-button" onclick="removeButton(this)">
+    <img src="icon1.png" alt="Icono 1" width="20" height="20">
+  </button>
+  <button id="button2" class="icon-button" onclick="removeButton(this)">
+    <img src="icon2.png" alt="Icono 2" width="20" height="20">
+  </button>
+  <button id="button3" class="icon-button" onclick="removeButton(this)">
+    <img src="icon3.png" alt="Icono 3" width="20" height="20">
+  </button>
+  <button id="button4" class="icon-button" onclick="removeButton(this)">
+    <img src="icon4.png" alt="Icono 4" width="20" height="20">
+  </button>
+  <button id="button5" class="icon-button" onclick="removeButton(this)">
+    <img src="icon5.png" alt="Icono 5" width="20" height="20">
+  </button>
+  <button id="button6" class="icon-button" onclick="removeButton(this)">
+    <img src="icon6.png" alt="Icono 6" width="20" height="20">
+  </button>
+
+  <script>
+    function removeButton(button) {
+      button.remove();
+    }
+  </script>
+</body>
+</html>
