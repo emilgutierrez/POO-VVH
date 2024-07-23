@@ -1,0 +1,47 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo y la container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Estilos para las secciones */
+.section {
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 8px;
+}
+
+#section1 {
+    background-color: #fc7405db;
+}
+
+#section2 {
+    background-color: #2ecc71;
+}
+
+#section3 {
+    background-color: #3ce745f6;
+}
+
+#section4 {
+    background-color: #f39c12;
+}
