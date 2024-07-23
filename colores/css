@@ -1,0 +1,52 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+    max-width: 960px; /* Adjust max-width as needed */
+    margin: 20px auto; /* Center the container with some top and bottom margin */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
+}
+
+/* Top Navigation Styles */
+.top-nav {
+    background-color: #f0f0f0;
+    height: 50px;
+}
+
+/* Side Navigation Styles */
+.side-nav {
+    display: block; /* Display vertically */
+    width: 150px; /* Adjust width as needed */
+    background-color: #e0e0e0;
+    padding: 10px; /* Add padding inside the side navigation */
+}
+
+/* Main Content Styles */
+.main {
+    display: inline-block;
+    width: calc(100% - 170px); /* Adjust width to accommodate side nav */
+    vertical-align: top;
+    padding: 0 20px; /* Add padding inside the main content */
+}
+
+.sub-content {
+    display: block; /* Display each sub-content block vertically */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+/* Advertisement Styles */
+#advertisement {
+    background-color: #ffd700; /* Example: Yellow background */
+    height: 200px; /* Example: Set height */
+    margin-top: 20px; /* Example: Add top margin for spacing */
+    text-align: center; /* Center the content inside */
+    line-height: 200px; /* Center vertically (adjust based on content height) */
+    font-size: 24px; /* Example: Adjust font size */
+    font-weight: bold; /* Example: Add bold font weight */
+}

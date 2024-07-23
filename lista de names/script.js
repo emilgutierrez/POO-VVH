@@ -29,6 +29,7 @@ function countCards(card) {
 // Manejo del formulario
 const form = document.getElementById('cardForm');
 form.addEventListener('submit', function(event) {
+    //primera linea al ejecutarce 
     event.preventDefault();
     const cardInput = document.getElementById('cardInput').value.trim().toUpperCase();
 
