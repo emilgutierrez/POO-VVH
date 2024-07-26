@@ -4,13 +4,13 @@
     justify-content: center; /* Centra los ítems horizontalmente */
     align-items: center; /* Centra los ítems verticalmente */
     height: 100vh; /* Altura del contenedor igual a la altura de la ventana */
-    background-color: #e0e0e0; /* Fondo para que los ítems sean visibles */
+    background-color: #f3a600; /* Fondo para que los ítems sean visibles */
   }
   
   /* Estilo para los ítems flexibles */
   .flex-item {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color: #0d9900;
+    border: 1px solid #0095f8;
     padding: 20px;
     margin: 10px;
   }
