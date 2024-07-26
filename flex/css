@@ -1,0 +1,13 @@
+/* Estilo para el contenedor flexible */
+.flex-container {
+    display: flex;
+    /* Puedes añadir propiedades adicionales si es necesario */
+}
+
+/* Estilo para los ítems flexibles */
+.flex-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px; /* Puedes ajustar este padding si lo deseas */
+    margin: 10px; /* Puedes ajustar este margin si lo deseas */
+}
