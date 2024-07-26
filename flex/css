@@ -1,13 +1,18 @@
 /* Estilo para el contenedor flexible */
 .flex-container {
     display: flex;
-    /* Puedes añadir propiedades adicionales si es necesario */
+    justify-content: space-around; /* Distribuye los ítems con espacio igual alrededor */
+    align-items: center; /* Centra los ítems verticalmente en el contenedor */
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+    border: 2px solid #000; /* Añade un borde para visualizar mejor el contenedor */
 }
 
 /* Estilo para los ítems flexibles */
 .flex-item {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    padding: 20px; /* Puedes ajustar este padding si lo deseas */
-    margin: 10px; /* Puedes ajustar este margin si lo deseas */
+    padding: 20px; /* Añade relleno interno a los ítems */
+    margin: 10px; /* Añade espacio externo entre los ítems */
+    flex: 1; /* Hace que todos los ítems crezcan por igual para llenar el contenedor */
+    text-align: center; /* Centra el texto dentro de los ítems */
 }
