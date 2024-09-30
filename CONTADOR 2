@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Likes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Contadores de Likes</h1>
+    <div class="contador-container">
+        <div class="contador">
+            <div class="contador-numero" id="like1">0</div>
+            <button class="btn-like" data-id="like1">Me gusta</button>
+        </div>
+        <div class="contador">
+            <div class="contador-numero" id="like2">0</div>
+            <button class="btn-like" data-id="like2">Me gusta</button>
+        </div>
+        <div class="contador">
+            <div class="contador-numero" id="like3">0</div>
+            <button class="btn-like" data-id="like3">Me gusta</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+JAVA
+// Inicializa un objeto para guardar los contadores de likes
+const likes = {
+    like1: 0,
+    like2: 0,
+    like3: 0
+};
+
+// Función para actualizar el contador de likes
+function actualizarContador(id) {
+    likes[id]++;
+    document.getElementById(id).textContent = likes[id];
+}
+
+// Agrega eventos a los botones
+const botones = document.querySelectorAll('.btn-like');
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const id = boton.getAttribute('data-id');
+        actualizarContador(id);
+    });
+});
+
+
+
+    like3: 0
+};
+
+// Función para actualizar el contador de likes
+function actualizarContador(id) {
+    likes[id]++;
+    document.getElementById(id).textContent = likes[id];
+}
+
+// Agrega eventos a los botones
+const botones = document.querySelectorAll('.btn-like');
+botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const id = boton.getAttribute('data-id');
+        actualizarContador(id);
+    });
+});body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.contador-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.btn-like {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-like:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
