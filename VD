@@ -1,0 +1,194 @@
+//Html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoLab</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <nav class="nav-container">
+            <h1>VideoLab</h1>
+            <input type="text" placeholder="Search" name="query" class="search" aria-label="Search videos">
+            <button class="btn" aria-label="Login">Login</button>
+        </nav>
+    </header>
+
+    <main class="flex-container">
+        <section class="col-l">
+            <video id="mainVideo" width="720" height="400" controls aria-label="Main video player">
+                <source src="assets/mictianos.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="row">
+                <div class="start">
+                    <h2 id="videoTitle">Minctianos IRL</h2>
+                    <p id="videoInfo">1.3K Views | June, 18, 2021</p>
+                    <div class="user">
+                        <img src="assets/user.png" alt="User avatar" class="avatar-s">
+                        <span class="user-name">Example User Name</span>
+                    </div>
+                </div>
+                <button class="btn" aria-label="Subscribe to channel">Subscribe</button>
+            </div>
+        </section>
+
+        <aside class="col-r">
+            <h3 class="sub-header">Up Next</h3>
+            <div class="video-small" data-src="assets/pepe4.mp4" data-title="chipi chipi" data-info="10M Views | April 1, 2023">
+                <img src="assets/captura4.png" alt="Thumbnail for chipi chipi" class="vid-s">
+                <div class="video-info">
+                    <span class="video-title">chipi chapa</span>
+                    <span class="video-views">10M Views | April 1, 2023</span>
+                </div>
+            </div>
+            <div class="video-small" data-src="assets/pepe3.mp4" data-title="superman" data-info="5M Views | May 15, 2023">
+                <img src="assets/captura3.png" alt="Thumbnail for superman" class="vid-s">
+                <div class="video-info">
+                    <span class="video-title">superman</span>
+                    <span class="video-views">5M Views | May 15, 2023</span>
+                </div>
+            </div>
+            <div class="video-small" data-src="assets/pepe2.mp4" data-title="omgchina " data-info="2M Views | June 1, 2023">
+                <img src="assets/captura2.png" alt="Thumbnail for omgchina" class="vid-s">
+                <div class="video-info">
+                    <span class="video-title">omg china</span>
+                    <span class="video-views">2M Views | June 1, 2023</span>
+                </div>
+            </div>
+            <div class="video-small" data-src="assets/Pepe.mp4" data-title="om1" data-info="8M Views | June 10, 2023">
+                <img src="assets/omg1.png" alt="Thumbnail for omg1" class="vid-s">
+                <div class="video-info">
+                    <span class="video-title">likin park</span>
+                    <span class="video-views">8M Views | June 10, 2023</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+//Javascript
+
+console.log("page loaded...");
+
+const mainVideo = document.getElementById('mainVideo');
+const videoTitle = document.getElementById('videoTitle');
+const videoInfo = document.getElementById('videoInfo');
+const smallVideos = document.querySelectorAll('.video-small');
+
+function updateMainVideo(src, title, info) {
+    mainVideo.src = src;
+    mainVideo.load();
+    mainVideo.muted = false; // Silenciar el video para permitir la reproducción automática
+    mainVideo.play().then(() => {
+        console.log("Video started playing automatically");
+    }).catch(error => {
+        console.log("Auto-play was prevented:", error);
+        // Intenta reproducir nuevamente después de un breve retraso
+        setTimeout(() => mainVideo.play(), 1000);
+    });
+    videoTitle.textContent = title;
+    videoInfo.textContent = info;
+}
+
+mainVideo.addEventListener('mouseover', function() {
+    if (this.paused) {
+        this.play().catch(error => {
+            console.log("Auto-play was prevented:", error);
+        });
+    }
+});
+
+mainVideo.addEventListener('mouseout', function() {
+    this.pause();
+});
+
+smallVideos.forEach(video => {
+    video.addEventListener('mouseover', function() {
+        const src = this.getAttribute('data-src');
+        const title = this.getAttribute('data-title');
+        const info = this.getAttribute('data-info');
+        updateMainVideo(src, title, info);
+    });
+});
+
+// Agregar un botón para activar/desactivar el sonido
+const muteButton = document.createElement('button');
+muteButton.textContent = 'Unmute';
+muteButton.className = 'mute-button';
+document.querySelector('.col-l').appendChild(muteButton);
+
+muteButton.addEventListener('click', () => {
+    mainVideo.muted = !mainVideo.muted;
+    muteButton.textContent = mainVideo.muted ? 'Unmute' : 'Mute';
+});
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f3f3f3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top {
+    background-color: #333;
+    height: 75px;
+    border-top: 5px solid rebeccapurple;
+    color: #fff;
+}
+
+.search {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0 100px;
+}
+
+.btn {
+    background-color: rebeccapurple;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-container, .flex-container {
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.nav-container {
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.flex-container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+
